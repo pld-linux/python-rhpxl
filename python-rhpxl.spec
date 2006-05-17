@@ -1,18 +1,22 @@
 Summary:	Library of Python code for configuring and running X
 Summary(pl):	Biblioteka kodu Pythona u¿ywana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
-Version:	0.4
-Release:	1
+Version:	0.18
+Release:	0.4
 License:	GPL
 Group:		Libraries
 Source0:	rhpxl-%{version}.tar.gz
-# Source0-md5:	c6dc279b3f77b68951af5c0a4a7124da
+# Source0-md5:	60088c7d19309600375f16ef1dbdb952
+Source1:	vesamodes
+Source2:	extramodes
 BuildRequires:	gettext-devel
 BuildRequires:	python-devel
 %pyrequires_eq	python-libs
-%ifnarch s390 s390x
-Requires:	python-xf86config >= 0.3.2
-%endif
+Requires:	hwdata >= 0.169
+Requires:	kudzu >= 1.2.34.3
+Requires:	newt
+Requires:	python-rhpl
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,8 +41,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_datadir}/rhpxl
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/rhpxl
+install %{SOURCE2} $RPM_BUILD_ROOT%{_datadir}/rhpxl
 
 %find_lang rhpxl
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -46,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f rhpxl.lang
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%attr(750,root,root) %{_sbindir}/ddcprobe
+%attr(755,root,root) %{_sbindir}/ddcprobe
 %dir %{py_sitescriptdir}/rhpxl
-%{py_sitescriptdir}/rhpxl/*.py*
+%{py_sitescriptdir}/rhpxl/*.py[co]
 %{_datadir}/rhpxl
