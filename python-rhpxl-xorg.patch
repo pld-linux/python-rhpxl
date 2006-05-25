@@ -1,0 +1,29 @@
+--- rhpxl-0.18/rhpxl/videocard.py~	2006-03-06 22:11:00.000000000 +0200
++++ rhpxl-0.18/rhpxl/videocard.py	2006-05-26 02:06:22.834984863 +0300
+@@ -77,12 +77,12 @@
+ 	if string.find(line,'\t') == -1:
+ 	    continue
+ 	( driver, desc ) = string.splitfields (line, '\t', 1)
+-        if os.access('/usr/%s/xorg/modules/drivers/%s_drv.so' % (libdir, driver), os.R_OK) or os.access('/usr/%s/xorg/modules/drivers/%s_drv.o' % (libdir, driver), os.R_OK):
++        if os.access('/usr/X11R6/%s/modules/drivers/%s_drv.so' % (libdir, driver), os.R_OK) or os.access('/usr/X11R6/%s/modules/drivers/%s_drv.o' % (libdir, driver), os.R_OK):
+ 	    drivers[driver] = VideoDriver(driver = driver, description = desc)
+ 	    
+     # Add drivers that do exist that we don't have entries for.
+-    if os.access('/usr/%s/xorg/modules/drivers' % (libdir,) , os.R_OK):
+-	d = os.listdir('/usr/%s/xorg/modules/drivers' %(libdir,))
++    if os.access('/usr/X11R6/%s/modules/drivers' % (libdir,) , os.R_OK):
++	d = os.listdir('/usr/X11R6/%s/modules/drivers' %(libdir,))
+ 	    
+ 	for module in d:
+ 	    if module.endswith('_drv.so') or module.endswith('_drv.o'):
+--- rhpxl-0.18/rhpxl/xhwstate.py~	2006-02-21 23:50:42.000000000 +0200
++++ rhpxl-0.18/rhpxl/xhwstate.py	2006-05-26 02:07:58.337133285 +0300
+@@ -790,7 +790,7 @@
+             else:
+                 libdir = 'lib'
+             
+-            modpath = "/usr/%s/xorg/modules/input/synaptics_drv.o" %(libdir,)
++            modpath = "/usr/X11R6/%s/modules/input/synaptics_drv.o" %(libdir,)
+ 
+             probedMice = mouse.getAllProbed()
+             if probedMice is None:
