@@ -21,15 +21,15 @@
 - 			    "/usr/share/fonts/KOI8-R/75dpi:unscaled"
 -			    ]
 +    standalone_fontpaths = [
-+        "/usr/share/fonts/misc:unscaled"
-+        "/usr/share/fonts/75dpi:unscaled"
-+        "/usr/share/fonts/100dpi:unscaled"
-+        "/usr/share/fonts/misc"
-+        "/usr/share/fonts/75dpi"
-+        "/usr/share/fonts/100dpi"
-+        "/usr/share/fonts/Type1"
-+        "/usr/share/fonts/TTF"
-+        "/usr/share/fonts/Speedo"
++        "/usr/share/fonts/misc:unscaled",
++        "/usr/share/fonts/75dpi:unscaled",
++        "/usr/share/fonts/100dpi:unscaled",
++        "/usr/share/fonts/misc",
++        "/usr/share/fonts/75dpi",
++        "/usr/share/fonts/100dpi",
++        "/usr/share/fonts/Type1",
++        "/usr/share/fonts/TTF",
++        "/usr/share/fonts/Speedo",
 +    ]
  
      #
