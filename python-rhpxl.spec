@@ -2,14 +2,15 @@ Summary:	Library of Python code for configuring and running X
 Summary(pl):	Biblioteka kodu Pythona u¿ywana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
 Version:	0.18
-Release:	0.5
+Release:	0.6
 License:	GPL
 Group:		Libraries
 Source0:	rhpxl-%{version}.tar.gz
 # Source0-md5:	60088c7d19309600375f16ef1dbdb952
 Source1:	vesamodes
 Source2:	extramodes
-Patch0:		%{name}-xorg.patch
+Patch0:		%{name}-fontpath.patch
+Patch1:		%{name}-xorg.patch
 BuildRequires:	gettext-devel
 BuildRequires:	python-devel
 %pyrequires_eq	python-libs
@@ -30,6 +31,7 @@ uruchamiania X.
 %prep
 %setup -q -n rhpxl-%{version}
 %patch0 -p1
+%patch1 -p1
 
 rm -f po/no.po
 
