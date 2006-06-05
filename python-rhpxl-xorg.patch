@@ -27,3 +27,29 @@
  
              probedMice = mouse.getAllProbed()
              if probedMice is None:
+--- rhpxl-0.18/rhpxl/xserver.py~	2006-06-05 22:47:22.520000488 +0300
++++ rhpxl-0.18/rhpxl/xserver.py	2006-06-05 22:49:17.632580544 +0300
+@@ -183,7 +183,7 @@
+ 	    # XXX - assuming 'XFree86' is the binary for server
+ 	    #
+ 	    servername = 'Xorg'
+-            serverPath = '/usr/bin/' + servername
++            serverPath = '/usr/X11R6/bin/' + servername
+ 
+             if os.access (serverPath, os.X_OK):
+                 try:
+@@ -409,7 +409,7 @@
+     writeXConfig('%s/tmp/XConfig.test' % (root,), hwstate, mouse, keyboard, standalone)
+ 
+     # setup to run X server
+-    serverPath = "/usr/bin/" + servername
++    serverPath = "/usr/X11R6/bin/" + servername
+ 
+     serverpid = os.fork()
+ 
+@@ -483,4 +483,4 @@
+ 	print "Could not start X server, sorry!"
+ 	sys.exit(0)
+ 
+-    os.system("/usr/bin/xterm -T 'It Worked!'")
++    os.system("/usr/X11R6/bin/xterm -T 'It Worked!'")
