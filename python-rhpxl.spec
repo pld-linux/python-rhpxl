@@ -2,7 +2,7 @@ Summary:	Library of Python code for configuring and running X
 Summary(pl):	Biblioteka kodu Pythona u¿ywana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
 Version:	0.18
-Release:	0.6
+Release:	0.9
 License:	GPL
 Group:		Libraries
 Source0:	rhpxl-%{version}.tar.gz
@@ -18,6 +18,9 @@ Requires:	hwdata >= 0.169
 Requires:	kudzu >= 1.2.34.3
 Requires:	newt
 Requires:	python-rhpl
+%ifnarch s390 s390x
+Requires:	python-xf86config >= 0.3.24
+%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
