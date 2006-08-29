@@ -1,0 +1,36 @@
+--- rhpxl-0.18/rhpxl/xserver.py~	2006-03-06 22:11:00.000000000 +0200
++++ rhpxl-0.18/rhpxl/xserver.py	2006-05-26 02:37:09.086464724 +0300
+@@ -313,22 +313,17 @@
+     if hwstate.videocard == None:
+ 	return None
+ 
+-    standalone_fontpaths = ["/usr/share/X11/fonts/misc:unscaled",
+- 			    "/usr/share/X11/fonts/Type1/",
+- 			    "/usr/share/X11/fonts/Speedo/",
+- 			    "/usr/share/X11/fonts/75dpi:unscaled",
+- 			    "/usr/share/X11/fonts/100dpi:unscaled",
+- 			    "/usr/share/X11/fonts/korean:unscaled",
+- 			    "/usr/share/X11/fonts/cyrillic:unscaled",
+- 			    "/usr/share/fonts/ISO8859-2/misc:unscaled",
+- 			    "/usr/share/fonts/ISO8859-2/75dpi:unscaled",
+- 			    "/usr/share/fonts/ISO8859-2/100dpi:unscaled",
+- 			    "/usr/share/fonts/ISO8859-9/misc:unscaled",
+- 			    "/usr/share/fonts/ISO8859-9/75dpi:unscaled",
+- 			    "/usr/share/fonts/ISO8859-9/100dpi:unscaled",
+- 			    "/usr/share/fonts/KOI8-R/misc:unscaled",
+- 			    "/usr/share/fonts/KOI8-R/75dpi:unscaled"
+-			    ]
++    standalone_fontpaths = [
++        "/usr/share/fonts/misc:unscaled",
++        "/usr/share/fonts/75dpi:unscaled",
++        "/usr/share/fonts/100dpi:unscaled",
++        "/usr/share/fonts/misc",
++        "/usr/share/fonts/75dpi",
++        "/usr/share/fonts/100dpi",
++        "/usr/share/fonts/Type1",
++        "/usr/share/fonts/TTF",
++        "/usr/share/fonts/Speedo",
++    ]
+ 
+     #
+     # get an xg86config object that represents the config file we're going
