@@ -2,7 +2,7 @@ Summary:	Library of Python code for configuring and running X
 Summary(pl):	Biblioteka kodu Pythona u¿ywana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
 Version:	0.18
-Release:	0.9
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	rhpxl-%{version}.tar.gz
