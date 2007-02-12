@@ -1,5 +1,5 @@
 Summary:	Library of Python code for configuring and running X
-Summary(pl):	Biblioteka kodu Pythona uøywana do konfiguracji i uruchamiania X
+Summary(pl.UTF-8):   Biblioteka kodu Pythona u≈ºywana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
 Version:	0.18
 Release:	0.9
@@ -25,8 +25,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The rhxpl package contains Python code for configuring and running X.
 
-%description -l pl
-Pakiet rhpxl zawiera kod Pythona uøywany do konfiguracji i
+%description -l pl.UTF-8
+Pakiet rhpxl zawiera kod Pythona u≈ºywany do konfiguracji i
 uruchamiania X.
 
 %prep
