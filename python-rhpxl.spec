@@ -1,5 +1,5 @@
 Summary:	Library of Python code for configuring and running X
-Summary(pl.UTF-8):   Biblioteka kodu Pythona używana do konfiguracji i uruchamiania X
+Summary(pl.UTF-8):	Biblioteka kodu Pythona używana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
 Version:	0.18
 Release:	0.9
