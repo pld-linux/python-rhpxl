@@ -17,7 +17,6 @@ Requires:	python-rhpl
 %ifnarch s390 s390x
 Requires:	python-xf86config >= 0.3.34
 %endif
-BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
