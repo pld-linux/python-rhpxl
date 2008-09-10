@@ -5,8 +5,9 @@ Version:	0.49
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	rhpxl-%{version}.tar.gz
+Source0:	https://fedorahosted.org/releases/r/h/rhpxl/rhpxl-%{version}.tar.gz
 # Source0-md5:	ad8a3151b455d435c4928611f421fc0a
+URL:		https://fedoraproject.org/wiki/Rhpxl
 BuildRequires:	gettext-devel
 BuildRequires:	python-devel
 %pyrequires_eq	python-libs
