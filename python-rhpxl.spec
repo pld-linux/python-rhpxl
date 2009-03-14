@@ -1,12 +1,12 @@
 Summary:	Library of Python code for configuring and running X
 Summary(pl.UTF-8):	Biblioteka kodu Pythona używana do konfiguracji i uruchamiania X
 Name:		python-rhpxl
-Version:	0.49
+Version:	1.12
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	https://fedorahosted.org/releases/r/h/rhpxl/rhpxl-%{version}.tar.gz
-# Source0-md5:	ad8a3151b455d435c4928611f421fc0a
+# Source0-md5:	1389a00789bdc69b9011db40166abe6a
 URL:		https://fedoraproject.org/wiki/Rhpxl
 BuildRequires:	gettext-devel
 BuildRequires:	python-devel
@@ -53,8 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f rhpxl.lang
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_sbindir}/ddcprobe
 %dir %{py_sitedir}/rhpxl
 %{py_sitedir}/rhpxl/*.py[co]
 %attr(755,root,root) %{py_sitedir}/rhpxl/*.so
 %{_datadir}/rhpxl
+%{py_sitedir}/rhpxl-%{version}-*.egg-info
