@@ -8,7 +8,7 @@ Group:		Libraries
 Source0:	https://fedorahosted.org/releases/r/h/rhpxl/rhpxl-%{version}.tar.gz
 # Source0-md5:	1389a00789bdc69b9011db40166abe6a
 URL:		https://fedoraproject.org/wiki/Rhpxl
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	python-devel
 %pyrequires_eq	python-libs
 Requires:	hwdata >= 0.169
